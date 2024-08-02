@@ -1,5 +1,4 @@
 /*Background / Body */
-
 body{
     background-image: url("img/smoke-lilac-colored-smoke.jpg");
     background-attachment: fixed;
@@ -67,7 +66,7 @@ img{
 }
 
 /*Text Color / Font/ Margin*/
-p,h1,h2,h3,ul,label,button{
+p,h1,h2,h3,label,button{
     color:#EDDDC0;
     mix-blend-mode: difference;
     text-align: center;
@@ -86,19 +85,27 @@ p,ul{
 }
 
 /*Lists*/
-ul{
-    margin-right: 155px;
+div.list_container{
+    text-align: center;
 }
-/* Was supposed to change the bullets before the listed items but idk it doesn't work */
-/* li::marker{
-    content: "•";
-} */
+ul{
+    color:#EDDDC0;
+    mix-blend-mode: difference;
+    font-family:'DM Sans', sans-serif;
+    display: inline-block;
+    align-items: center;
+}
+li{
+    text-align: start;
+}
 
 /*Dividers*/
 hr{
     margin-left: 15%;
     margin-right: 15%;
     color:#EDDDC0;
+    mix-blend-mode: difference;
+    height: 3px;
 }
 
 .pages{
@@ -257,10 +264,6 @@ h2{
         margin-left: 0px;
         margin-right: 0px;
     }
-
-    ul{
-        margin-right: 95px;
-    }
 }
 
 @media screen and (max-width: 550px) {
@@ -298,10 +301,6 @@ h2{
     h2{
         margin-left: 0px;
         margin-right: 0px;
-    }
-
-    ul{
-        margin-right: 95px;
     }
 
     main img{
@@ -344,10 +343,6 @@ h2{
     }
     h2{
         font-size: 1.15em;
-    }
-
-    ul{
-        margin-right: 50px;
     }
 
     p,ul,a,button{
@@ -397,10 +392,6 @@ h2{
         margin-left: 0px;
         margin-right: 0px;
     }
-
-    ul{
-        margin-right: 50px;
-    }
 }
 
 @media screen and (max-width: 391px) {
@@ -440,9 +431,5 @@ h2{
     h2{
         margin-left: 0px;
         margin-right: 0px;
-    }
-
-    ul{
-        margin-right: 50px;
     }
 }
