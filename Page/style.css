@@ -1,0 +1,448 @@
+/*Background / Body */
+
+body{
+    background-image: url("img/smoke-lilac-colored-smoke.jpg");
+    background-attachment: fixed;
+    background-blend-mode: difference;
+    margin: 50px;
+    animation: BackgroundAnimation 5s ease-in-out infinite;
+}
+@keyframes BackgroundAnimation{
+    0%{background-color: rgb(27, 0, 35);}
+    50%{background-color: rgb(18, 23, 66);}
+    100%{background-color: rgb(27, 0, 35);}
+}
+
+/*Identity Card*/
+header{
+    background-color: #3F1A546E;
+    background-image: url("img/mini_dots.png");
+    border-radius: 25px;
+    height: 400px;
+    width: 680px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr;
+    margin: auto;
+}
+
+/*Images*/
+img{
+    border-radius: 10px;
+    display: flex;
+    margin: auto;
+}
+
+/*Card Text Part*/
+.info-text{
+    grid-column-start: 1;
+    grid-column-end: 2;
+}
+
+/*Signature*/
+#signature{
+    margin:auto;
+    margin-top: 10px;
+}
+
+/*Card Text*/
+#text1{
+    margin: 0px;
+    margin-top:-175px;
+    font-size: 16px;
+}
+
+/*Card Links*/
+#links{
+    margin-top: -40px;
+    text-align: center;
+}
+
+/*Card Image Part*/
+.info-image{
+    grid-column-start: 2;
+    grid-column-end: 3;
+    grid-row-start: 1;
+    grid-row-end: 2;
+}
+
+/*Text Color / Font/ Margin*/
+p,h1,h2,h3,ul,label,button{
+    color:#EDDDC0;
+    mix-blend-mode: difference;
+    text-align: center;
+    font-family:'DM Sans', sans-serif;
+    margin-left:100px;
+    margin-right:100px;
+}
+p,ul{
+    font-size: 17.5px;
+}
+
+/*Text Focus*/
+.link:focus,p:focus,h1:focus,h2:focus,h3:focus,ul:focus{
+    background-color: #40135ba0;
+    color: #FFFFFF;
+}
+
+/*Lists*/
+ul{
+    margin-right: 155px;
+}
+/* Was supposed to change the bullets before the listed items but idk it doesn't work */
+/* li::marker{
+    content: "•";
+} */
+
+/*Dividers*/
+hr{
+    margin-left: 15%;
+    margin-right: 15%;
+    color:#EDDDC0;
+}
+
+.pages{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+.pages p{
+    margin: 0px;
+    margin-left: 20px;
+    margin-right: 20px;
+}
+
+/*Buttons*/
+button{
+    border: 2px solid #EDDDC0;
+    border-bottom: 4px solid #EDDDC0;
+    border-radius: 3px;
+    background: none;
+    padding: 3px 12px 3px 12px;
+    display: flex;
+    flex-direction: column;
+    margin: auto;
+    margin-bottom: 5px;
+    font-size: 17px;
+}
+button:hover{
+    text-decoration: underline solid #EDDDC0;
+}
+button:active{
+    text-decoration: none;
+}
+.button_inline{
+    display: inline;
+}
+
+/*Links*/
+.link{
+    font-family:'DM Sans', sans-serif;
+    color:#EDDDC0;
+    text-decoration: underline solid #EDDDC0;
+    text-align: center;
+}
+.link:hover{
+    color:#EDDDC0;
+    text-decoration: none;
+}
+.link:active{
+    color:#FFFFFF;
+    text-decoration: underline solid #FFFFFF;
+}
+
+/*Highlightings*/
+mark,h1{
+    background-color: rgba(225, 207, 173, 0.225);
+    color:#EDDDC0;
+}
+
+/*Titles*/
+h1{
+    text-decoration: underline solid #EDDDC0;
+    font-family: "Jacquard 24", system-ui;
+    font-size: 3em;
+    background-size: 40%;
+    margin-top: 15px;
+    margin-bottom: 30px;
+}
+
+/*Sub Titles*/
+h2{
+    background-color: rgba(225, 207, 173, 0.04);
+    font-family: "Oswald", sans-serif;
+    font-size: 20px;
+    margin-left: 35%;
+    margin-right: 35%;
+    text-decoration: underline solid #EDDDC0 1px;
+    font-weight: 550;
+}
+
+/* --------------Portfolio-------------- */
+.portfolio_intro{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+.portfolio_intro p{
+    background-color: #3F1A546E;
+    border-radius: 25px;
+    height: 390px;
+    width: 350px;
+    padding: 40px 50px 30px 30px;
+    margin: 0px;
+}
+.portfolio_intro img{
+    margin: auto 0px auto -30px;
+}
+
+/* --------------Asterisks-------------- */
+.asterisk{
+    font-family:'DM Sans', serif;
+    font-size: 45px;
+    padding: 0px;
+    margin: 0px;
+}
+#start{
+    animation: FloatAnimation 5s ease-in-out infinite;
+}
+@keyframes FloatAnimation{
+    0%{transform: translatey( 0px );}
+    50%{transform: translateY( 10px );}
+    100%{transform: translateY( 0px );}
+}
+#end{
+    animation: FloatReverseAnimation 5s ease-in-out infinite;
+}
+@keyframes FloatReverseAnimation{
+    0%{transform: translateY( 10px );}
+    50%{transform: translateY( 0px );}
+    100%{transform: translateY( 10px );}
+}
+
+
+/*Media Queries*/
+@media screen and (max-width: 790px) {
+    body{
+        margin: 25px;
+    }
+    header{
+        width: 75%;
+        height: 740px;
+        display: flex;
+        flex-direction: column;
+        margin: auto;
+    }
+    #text1{
+        margin-top: 0px;
+    }
+    #links{
+        margin-top: 15px;
+    }
+    #autoportrait{
+        margin: auto;
+    }
+
+    hr{
+        margin-left: 5%;
+        margin-right: 5%;
+    }
+
+    p,h1,h2,h3,ul{
+        margin-left: 50px;
+        margin-right: 50px;
+    }
+
+    h2{
+        margin-left: 0px;
+        margin-right: 0px;
+    }
+
+    ul{
+        margin-right: 95px;
+    }
+}
+
+@media screen and (max-width: 550px) {
+    body{
+        margin: 12px;
+    }
+    header{
+        width:380px;
+        height: 350px;
+        display: flex;
+        flex-direction: column;
+        margin: auto;
+    }
+    #text1{
+        margin-top: 0px;
+    }
+    #links{
+        margin-top: 20px;
+        margin-bottom: 10px;
+    }
+    #autoportrait{
+        display: none;
+    }
+
+    hr{
+        margin-left: 2.5%;
+        margin-right: 2.5%;
+    }
+
+    p,h1,h2,h3,ul{
+        margin-left: 25px;
+        margin-right: 25px;
+    }
+
+    h2{
+        margin-left: 0px;
+        margin-right: 0px;
+    }
+
+    ul{
+        margin-right: 95px;
+    }
+
+    main img{
+        width: 100%;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    body{
+        margin: 6px;
+    }
+    header{
+        width:330px;
+        height:350px;
+        display: flex;
+        flex-direction: column;
+        margin: auto;
+    }
+    #text1{
+        margin-top: 0px;
+    }
+    #links{
+        margin-top: 15px;
+    }
+
+    hr{
+        margin-left: 1%;
+        margin-right: 1%;
+    }
+
+    p,h1,h2,h3,ul{
+        margin-left: 12px;
+        margin-right: 12px;
+    }
+
+    h1{
+        margin-left: 0px;
+        margin-right: 0px;
+        font-size: 2em;
+    }
+    h2{
+        font-size: 1.15em;
+    }
+
+    ul{
+        margin-right: 50px;
+    }
+
+    p,ul,a,button{
+        font-size: 15px;
+    }
+}
+
+@media screen and (max-width: 430px) {
+    body{
+        margin: 3px;
+    }
+    header{
+        width:90%;
+        height:300px;
+        display: flex;
+        flex-direction: column;
+        margin: auto;
+    }
+    #signature{
+        width: 182px;
+        height: 150px;
+    }
+    #text1{
+        margin-top: 0px;
+    }
+    #links{
+        margin-top: 15px;
+    }
+
+    .pages p{
+        margin: 0px;
+        margin-left: 10px;
+        margin-right: 10px;
+    }
+    
+    hr{
+        margin-left: 0%;
+        margin-right: 0%;
+    }
+
+    p,h1,h2,h3,ul{
+        margin-left: 0px;
+        margin-right: 0px;
+    }
+
+    h2{
+        margin-left: 0px;
+        margin-right: 0px;
+    }
+
+    ul{
+        margin-right: 50px;
+    }
+}
+
+@media screen and (max-width: 391px) {
+    header{
+        height: 310px;
+        display: flex;
+        flex-direction: column;
+        margin: auto;
+    }
+    #signature{
+        width: 182px;
+        height: 150px;
+    }
+
+    #text1{
+        margin-top: 0px;
+    }
+    #links{
+        margin-top: 15px;
+    }
+    #autoportrait{
+        margin: auto;
+        width: 220px;
+        height: 250px;
+    }
+    
+    hr{
+        margin-left: -2px;
+        margin-right: -2px;
+    }
+
+    p,h1,h2,h3,ul{
+        margin-left: 0px;
+        margin-right: 0px;
+    }
+
+    h2{
+        margin-left: 0px;
+        margin-right: 0px;
+    }
+
+    ul{
+        margin-right: 50px;
+    }
+}
