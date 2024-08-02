@@ -87,7 +87,6 @@ p,ul{
 /*Lists*/
 .list_container{
     text-align: center;
-    margin: auto;
 }
 ul{
     color:#EDDDC0;
@@ -95,7 +94,6 @@ ul{
     font-family:'DM Sans', sans-serif;
     display: inline-block;
     align-items: center;
-    margin: auto;
 }
 li{
     text-align: start;
