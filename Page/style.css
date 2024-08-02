@@ -85,7 +85,7 @@ p,ul{
 }
 
 /*Lists*/
-div.list_container{
+.list_container{
     text-align: center;
 }
 ul{
