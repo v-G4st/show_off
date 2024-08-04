@@ -24,6 +24,36 @@ header{
     grid-template-rows: 1fr;
     margin: auto;
 }
+    /*Card Text Part*/
+    .info-text{
+        grid-column-start: 1;
+        grid-column-end: 2;
+    }
+    /*Signature*/
+    #signature{
+        margin:auto;
+        margin-top: 10px;
+    }
+    /*Card Text*/
+    #text1{
+        margin: 0px;
+        margin-top:-175px;
+        font-size: 16px;
+    }
+    /*Card Links*/
+    #links{
+        margin-top: -40px;
+        text-align: center;
+    }
+    /*Card Image Part*/
+    .info-image{
+        grid-column-start: 2;
+        grid-column-end: 3;
+        grid-row-start: 1;
+        grid-row-end: 2;
+    }
+/* --- */
+
 
 /*Images*/
 img{
@@ -32,50 +62,15 @@ img{
     margin: auto;
 }
 
-/*Card Text Part*/
-.info-text{
-    grid-column-start: 1;
-    grid-column-end: 2;
-}
-
-/*Signature*/
-#signature{
-    margin:auto;
-    margin-top: 10px;
-}
-
-/*Card Text*/
-#text1{
-    margin: 0px;
-    margin-top:-175px;
-    font-size: 16px;
-}
-
-/*Card Links*/
-#links{
-    margin-top: -40px;
-    text-align: center;
-}
-
-/*Card Image Part*/
-.info-image{
-    grid-column-start: 2;
-    grid-column-end: 3;
-    grid-row-start: 1;
-    grid-row-end: 2;
-}
-
 /*Text Color / Font/ Margin*/
 p,h1,h2,h3,label,button{
     color:#EDDDC0;
     mix-blend-mode: difference;
     text-align: center;
     font-family:'DM Sans', sans-serif;
-    margin-left:100px;
-    margin-right:100px;
-}
-p,ul{
     font-size: 17.5px;
+    margin-left: 200px;
+    margin-right: 200px;
 }
 
 /*Text Focus*/
@@ -87,6 +82,7 @@ p,ul{
 /*Lists*/
 div.list_container{
     text-align: center;
+    margin: auto;
 }
 ul{
     color:#EDDDC0;
@@ -94,6 +90,7 @@ ul{
     font-family:'DM Sans', sans-serif;
     display: inline-block;
     align-items: center;
+    margin: auto;
 }
 li{
     text-align: start;
@@ -105,9 +102,10 @@ hr{
     margin-right: 15%;
     color:#EDDDC0;
     mix-blend-mode: difference;
-    height: 3px;
+    height: 2px;
 }
 
+/* Pages */
 .pages{
     display: flex;
     flex-direction: row;
@@ -179,8 +177,7 @@ h2{
     background-color: rgba(225, 207, 173, 0.04);
     font-family: "Oswald", sans-serif;
     font-size: 20px;
-    margin-left: 35%;
-    margin-right: 35%;
+    margin: 0px 35% 0px 35%;
     text-decoration: underline solid #EDDDC0 1px;
     font-weight: 550;
 }
@@ -205,8 +202,7 @@ h2{
 
 /* --------------Asterisks-------------- */
 .asterisk{
-    font-family:'DM Sans', serif;
-    font-size: 45px;
+    font-size: 40px;
     padding: 0px;
     margin: 0px;
 }
@@ -220,7 +216,7 @@ h2{
 }
 #end{
     animation: FloatReverseAnimation 5s ease-in-out infinite;
-}
+} 
 @keyframes FloatReverseAnimation{
     0%{transform: translateY( 10px );}
     50%{transform: translateY( 0px );}
@@ -431,5 +427,9 @@ h2{
     h2{
         margin-left: 0px;
         margin-right: 0px;
+    }
+
+    .asterisk{
+        font-size: 25px;
     }
 }
