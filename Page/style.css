@@ -1,8 +1,8 @@
-/*Background / Body */
+/* Background / Body */
 body{
     background-image: url("img/smoke-lilac-colored-smoke.jpg");
-    background-attachment: fixed;
     background-blend-mode: difference;
+    background-attachment: fixed;
     margin: 50px;
     animation: BackgroundAnimation 5s ease-in-out infinite;
 }
@@ -12,57 +12,41 @@ body{
     100%{background-color: rgb(27, 0, 35);}
 }
 
-/*Identity Card*/
+/* Header */
 header{
     background-color: #3F1A546E;
     background-image: url("img/mini_dots.png");
-    border-radius: 25px;
+    border-radius: 20px;
+    width: 655px;
     height: 400px;
-    width: 680px;
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-template-rows: 1fr;
+    display: flex;
+    flex-direction: row;
     margin: auto;
+    justify-content: center;
 }
-    /*Card Text Part*/
-    .info-text{
-        grid-column-start: 1;
-        grid-column-end: 2;
-    }
-    /*Signature*/
-    #signature{
-        margin:auto;
-        margin-top: 10px;
-    }
-    /*Card Text*/
-    #text1{
-        margin: 0px;
-        margin-top:-175px;
-        font-size: 16px;
-    }
-    /*Card Links*/
-    #links{
-        margin-top: -40px;
-        text-align: center;
-    }
-    /*Card Image Part*/
-    .info-image{
-        grid-column-start: 2;
-        grid-column-end: 3;
-        grid-row-start: 1;
-        grid-row-end: 2;
-    }
-/* --- */
+/*Card Text Part*/
+header div.info_text{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    align-items: space-between;
+    margin: 10px;
+}
+header div.info_text p{
+    margin: auto auto 15px auto;
+}
+header div.info_text div{
+    margin: auto auto 10px auto;
+}
 
-
-/*Images*/
+/* Images */
 img{
     border-radius: 10px;
     display: flex;
     margin: auto;
 }
 
-/*Text Color / Font/ Margin*/
+/* Text Color / Font/ Margin */
 p,h1,h2,h3,label,button{
     color:#EDDDC0;
     mix-blend-mode: difference;
@@ -73,13 +57,13 @@ p,h1,h2,h3,label,button{
     margin-right: 200px;
 }
 
-/*Text Focus*/
+/* Text Focus */
 .link:focus,p:focus,h1:focus,h2:focus,h3:focus,ul:focus{
     background-color: #40135ba0;
     color: #FFFFFF;
 }
 
-/*Lists*/
+/* Lists */
 div.list_container{
     text-align: center;
     margin: auto;
@@ -98,11 +82,16 @@ li{
 
 /*Dividers*/
 hr{
-    margin-left: 15%;
-    margin-right: 15%;
-    color:#EDDDC0;
+    color: #FFFFFF;
     mix-blend-mode: difference;
-    height: 2px;
+    margin: 8px 10% 8px 10%;
+    padding: 0;
+    border: 0;
+    height: 1rem;
+    background-image: url('data:image/svg+xml;charset=utf8,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20x%3D%220px%22%20y%3D%220px%22%20viewBox%3D%220%200%20512%20512%22%20width%3D%22512%22%20height%3D%22512%22%3E%3Cstyle%3Eline%20%7Bstroke-linecap%3A%20square%3Bstroke-width%3A%202px%3Bstroke%3A%20%23EDDDC0%3Bvector-effect%3A%20non-scaling-stroke%3B%7D%3C%2Fstyle%3E%3Cline%20x1%3D%22256%22%20y1%3D%220%22%20x2%3D%220%22%20y2%3D%22256%22%20%2F%3E%3Cline%20x1%3D%22256%22%20y1%3D%22512%22%20x2%3D%22512%22%20y2%3D%22256%22%20%2F%3E%3C%2Fsvg%3E');
+    background-position: center center;
+    background-repeat: repeat-x;
+    background-size: auto 30.1%;
 }
 
 /* Pages */
@@ -112,9 +101,7 @@ hr{
     justify-content: center;
 }
 .pages p{
-    margin: 0px;
-    margin-left: 20px;
-    margin-right: 20px;
+    margin: 0px 20px 0px 20px;
 }
 
 /*Buttons*/
@@ -124,17 +111,15 @@ button{
     border-radius: 3px;
     background: none;
     padding: 3px 12px 3px 12px;
+    margin: auto auto 2px auto;
     display: flex;
     flex-direction: column;
-    margin: auto;
-    margin-bottom: 5px;
-    font-size: 17px;
 }
 button:hover{
     text-decoration: underline solid #EDDDC0;
 }
 button:active{
-    text-decoration: none;
+    text-decoration: underline solid rgba(0, 0, 0, 0);
 }
 .button_inline{
     display: inline;
@@ -148,7 +133,6 @@ button:active{
     text-align: center;
 }
 .link:hover{
-    color:#EDDDC0;
     text-decoration: none;
 }
 .link:active{
@@ -168,8 +152,7 @@ h1{
     font-family: "Jacquard 24", system-ui;
     font-size: 3em;
     background-size: 40%;
-    margin-top: 15px;
-    margin-bottom: 30px;
+    margin: 5px auto 10px auto;
 }
 
 /*Sub Titles*/
@@ -177,9 +160,9 @@ h2{
     background-color: rgba(225, 207, 173, 0.04);
     font-family: "Oswald", sans-serif;
     font-size: 20px;
-    margin: 0px 35% 0px 35%;
+    margin: 10px 35% 10px 35%;
     text-decoration: underline solid #EDDDC0 1px;
-    font-weight: 550;
+    font-weight: 600;
 }
 
 /* --------------Portfolio-------------- */
@@ -198,6 +181,17 @@ h2{
 }
 .portfolio_intro img{
     margin: auto 0px auto -30px;
+    border-radius: 50%;
+}
+
+.photos{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+.photos img{
+    margin: 15px;
 }
 
 /* --------------Asterisks-------------- */
@@ -218,9 +212,9 @@ h2{
     animation: FloatReverseAnimation 5s ease-in-out infinite;
 } 
 @keyframes FloatReverseAnimation{
-    0%{transform: translateY( 10px );}
-    50%{transform: translateY( 0px );}
-    100%{transform: translateY( 10px );}
+    0%{transform: translateY( 0px );}
+    50%{transform: translateY( -10px );}
+    100%{transform: translateY( 0px );}
 }
 
 
@@ -236,90 +230,53 @@ h2{
         flex-direction: column;
         margin: auto;
     }
-    #text1{
-        margin-top: 0px;
-    }
-    #links{
-        margin-top: 15px;
-    }
-    #autoportrait{
-        margin: auto;
-    }
-
     hr{
         margin-left: 5%;
         margin-right: 5%;
     }
-
-    p,h1,h2,h3,ul{
+    p,h2,h3,ul{
         margin-left: 50px;
         margin-right: 50px;
     }
-
-    h2{
+    h1{
         margin-left: 0px;
         margin-right: 0px;
     }
 }
-
 @media screen and (max-width: 550px) {
     body{
         margin: 12px;
     }
     header{
         width:380px;
-        height: 350px;
-        display: flex;
-        flex-direction: column;
-        margin: auto;
-    }
-    #text1{
-        margin-top: 0px;
-    }
-    #links{
-        margin-top: 20px;
-        margin-bottom: 10px;
+        height: 360px;
     }
     #autoportrait{
         display: none;
     }
-
     hr{
         margin-left: 2.5%;
         margin-right: 2.5%;
     }
-
-    p,h1,h2,h3,ul{
+    p,ul{
         margin-left: 25px;
         margin-right: 25px;
     }
-
-    h2{
+    h1,h2{
         margin-left: 0px;
         margin-right: 0px;
     }
-
     main img{
         width: 100%;
     }
 }
-
 @media screen and (max-width: 480px) {
     body{
         margin: 6px;
     }
     header{
-        width:330px;
-        height:350px;
-        display: flex;
-        flex-direction: column;
-        margin: auto;
-    }
-    #text1{
-        margin-top: 0px;
-    }
-    #links{
-        margin-top: 15px;
+        width: 330px;
+        height: 330px;
     }
 
     hr{
@@ -327,9 +284,13 @@ h2{
         margin-right: 1%;
     }
 
-    p,h1,h2,h3,ul{
+    p,ul,h2{
         margin-left: 12px;
         margin-right: 12px;
+        font-size: 15px;
+    }
+    button,a{
+        font-size: 15px;
     }
 
     h1{
@@ -340,95 +301,31 @@ h2{
     h2{
         font-size: 1.15em;
     }
-
-    p,ul,a,button{
-        font-size: 15px;
-    }
 }
-
 @media screen and (max-width: 430px) {
     body{
         margin: 3px;
     }
     header{
-        width:90%;
-        height:300px;
-        display: flex;
-        flex-direction: column;
-        margin: auto;
+        width:92%;
+        height:320px;
     }
-    #signature{
-        width: 182px;
-        height: 150px;
-    }
-    #text1{
-        margin-top: 0px;
-    }
-    #links{
-        margin-top: 15px;
-    }
-
     .pages p{
-        margin: 0px;
-        margin-left: 10px;
-        margin-right: 10px;
-    }
-    
+        margin: 0px 10px 0px 10px;
+    }  
     hr{
         margin-left: 0%;
         margin-right: 0%;
     }
-
     p,h1,h2,h3,ul{
-        margin-left: 0px;
-        margin-right: 0px;
-    }
-
-    h2{
         margin-left: 0px;
         margin-right: 0px;
     }
 }
-
 @media screen and (max-width: 391px) {
     header{
-        height: 310px;
-        display: flex;
-        flex-direction: column;
-        margin: auto;
+        height: 320px;
     }
-    #signature{
-        width: 182px;
-        height: 150px;
-    }
-
-    #text1{
-        margin-top: 0px;
-    }
-    #links{
-        margin-top: 15px;
-    }
-    #autoportrait{
-        margin: auto;
-        width: 220px;
-        height: 250px;
-    }
-    
-    hr{
-        margin-left: -2px;
-        margin-right: -2px;
-    }
-
-    p,h1,h2,h3,ul{
-        margin-left: 0px;
-        margin-right: 0px;
-    }
-
-    h2{
-        margin-left: 0px;
-        margin-right: 0px;
-    }
-
     .asterisk{
         font-size: 25px;
     }
