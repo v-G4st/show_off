@@ -4,48 +4,117 @@
             <meta charset="utf-8">
             <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
             <link rel="stylesheet" href="style.css" />
+            <link rel="website icon" type="png" href="img/icon.png">
             <link rel="preconnect" href="https://fonts.googleapis.com">
             <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
             <link href="https://fonts.googleapis.com/css2?family=Jacquard+24&display=swap" rel="stylesheet">
             <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&display=swap" rel="stylesheet">
+            <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
             <title>Gast's Form</title>
         </head>
 
         <body>
-            <p class="asterisk" id="start">*</p>
+            <p class="asterisk" id="start">｡༺⛧°𖦹°⛧༻｡</p>
 
             <header>
-                <img class="info-text" id="signature" src="img/signature_mini.png" alt="my signature" width="242" height="200"/>
-               
-                <p class="info-text" id="text1">
-                    My name is Gast<br>They/them<br>Artist<br/><br/><mark>| Commissions not yet opened |</mark>
-                </p>
+                <div class="info_text">
+                    <img src="img/signature_mini.png" alt="my signature" width="242" height="200"/>
+                
+                    <p>
+                        My name is Gast<br>They/them<br>Artist<br/><br/><mark>| Commissions not yet opened |</mark>
+                    </p>
 
-                <div class="info-text" id="links">
-                    <a href="https://www.tiktok.com/@g4st_3r" class="link" target="_blank">Tiktok</a>
-                    <a href="https://www.youtube.com/@G4st_3r" class="link" target="_blank">Youtube</a>
-                    <a href="https://twitter.com/G4st_3r" class="link" target="_blank">Twitter</a>
-                    <a href="https://www.instagram.com/g4st_3r/" class="link" target="_blank">Instagram</a>
-                    <a href="https://www.twitch.tv/g4st_3r" class="link" target="_blank">Twitch</a>
+                    <div class="icons">
+                        <a href="https://www.tiktok.com/@g4st_3r" class="link" target="_blank"><i class="fa-brands fa-tiktok"></i></a>
+                        <a href="https://www.youtube.com/@G4st_3r" class="link" target="_blank"><i class="fa-brands fa-youtube"></i></a>
+                        <a href="https://twitter.com/G4st_3r" class="link" target="_blank"><i class="fa-brands fa-twitter"></i></a>
+                        <a href="https://www.instagram.com/g4st_3r/" class="link" target="_blank"><i class="fa-brands fa-instagram"></i></a>
+                        <a href="https://www.twitch.tv/g4st_3r" class="link" target="_blank"><i class="fa-brands fa-twitch"></i></a>
+                    </div>
                 </div>
 
-                <img class="info-image" id="autoportrait" src="img/Autoportrait_cropped.jpg" alt="drawing of mine, my autoportrait" width="320" height="370" title="Autoportrait">
+                <img id="autoportrait" src="img/Autoportrait_cropped.jpg" alt="drawing of mine, my autoportrait" width="320" height="370" title="Autoportrait">
             </header>
 
-            <form>
-                <hr/>
+            <hr/>
+            <nav>
+                <a href="commissions.html" class="link">Commissions</a>
+                <p> | </p>
+                <a href="index.html" class="link">Home</a>
+                <p> | </p>
+                <a href="portfolio.html" class="link">Portfolio</a>
+            </nav>
+            <hr/>
 
-                <label id="jsp">Je sais pas lol</label>
-                <input name="jsp" type="text">
+            <form method="post" action="">
+                <h1 style="margin-top: 0px; border-radius: 5px 5px 0px 0px;">Form</h1>
 
-                <hr/>
+                <p>
+                    For perspective, this form is here to make communication easier, if you're not sure about one answer it's fine as after you fill the form, I will contact you and we'll have a consultation about what you're meaning to get for a commission.
+                </p>
+                <p><span>*</span> indicates that a question requires an answer</p>
+
+                <button type="reset">Reset</button>
+
+                <fieldset>
+                    <legend>ToS</legend>
+                    <p>
+                        Before answering this form and commission me, please refer to my <a href="commissions.html#ToS" class="link" target="_self">Terms of Service</a> to understand to a full extent what service you can get from me. You are required to agree to me ToS to continue any further.
+                    </p>
+                    <div class="checkbox">
+                        <input type="checkbox" name="tos_agreement" id="tos_agreement" required/>
+                        <label for="tos_agreement">I agree to the Terms of Service ?<span>*</span></label>
+                    </div>
+                </fieldset>
+                <fieldset>
+                    <legend>COMMISSIONS INFOS</legend>
+                    <div>
+                        <label for="commission_type">Type of commission :<span>*</span></label>
+                        <select id="commission_type" name="commission_type" required>
+                            <option value="sketch">Sketch</option>
+                            <option value="colored">Colored</option>
+                            <option value="rendered">Rendered</option>
+                        </select>
+
+                        <label for="number">Number of character :<span>*</span></label>
+                        <input type="number" id="number" name="number" required/>
+
+                        <label for="type1">Type.s of character.s :<span>*</span></label>
+                        <input type="text" id="type1" name="type1" placeholder="(ex. real person, fictional, oc...)" required/>
+
+                        <label for="type2">Type.s of the character.s :<span>*</span></label>
+                        <input type="text" id="type2" name="type2" placeholder="(ex. humanoid, furry, animal...)" required/>
+
+                        <label for="proportion">Proportions of the character :<span>*</span></label>
+                        <select id="proportion" name="porportion">
+                            <option value="head">Headshot</option>
+                            <option value="mid">Half body</option>
+                            <option value="full">Full body</option>
+                            <option value="other">Other...</option>
+                        </select>
+                    </div>
+                </fieldset>
+                <fieldset>
+                    <legend>CONTACTS</legend>
+                    <div>
+                        <label for="email">Your email adress :<span>*</span></label>
+                        <input type="email" name="email" id="email" placeholder="your_email@gmail.com" required autocomplete="email">
+
+                        <label for="name">Your name :<span>*</span></label>
+                        <input type="text" name="name" id="name" placeholder="Your name" required autocomplete="given-name"/>
+
+                        <label for="insta">Your Instagram user :</label>
+                        <input type="text" name="insta" id="insta" placeholder="@Your_username"/>
+
+                        <label for="discord">Your Discord user :</label>
+                        <input type="text" name="discord" id="discord" placeholder="@Your_username"/>
+                    </div>
+                </fieldset>
+
+
+                <button type="submit">Submit</button>
             </form>
 
-            <footer>
-                <a href="personal_presentation.html"><button>Personal Presentation</button></a>
-                <a href="index.html"><button>Home</button></a>
-            </footer>
-
-            <p class="asterisk" id="end">*</p>
+            <p class="asterisk" id="end">°⛧❖︎⛧°</p>
         </body>
     </html>
