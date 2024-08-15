@@ -1,6 +1,6 @@
 /* Background / Body */
 body{
-    background-image: url("img/smoke-lilac-colored-smoke.jpg");
+    background-image: url(img/smoke-lilac-colored-smoke.jpg), url(img/dots.png);
     background-blend-mode: difference;
     background-attachment: fixed;
     margin: 50px;
@@ -12,31 +12,42 @@ body{
     100%{background-color: rgb(27, 0, 35);}
 }
 
-/* Header */
+/* --------------Header-------------- */
 header{
     background-color: #3F1A546E;
-    background-image: url("img/mini_dots.png");
+    background-image: url(img/mini_dots.png);
     border-radius: 20px;
     width: 655px;
     height: 400px;
     display: flex;
     flex-direction: row;
     margin: auto;
+    padding: 5px;
     justify-content: center;
+    backdrop-filter: blur(2px);
 }
-/*Card Text Part*/
+/* Card Text Part */
 header div.info_text{
     display: flex;
     flex-direction: column;
     text-align: center;
     align-items: space-between;
+    justify-content: center;
     margin: 10px;
 }
 header div.info_text p{
     margin: auto auto 15px auto;
 }
-header div.info_text div{
+header div.info_text div.icons{
     margin: auto auto 10px auto;
+}
+
+/* Icons */
+i{
+    margin: auto 5px auto 5px;
+}
+button i{
+    margin-left: 0px;
 }
 
 /* Images */
@@ -47,19 +58,31 @@ img{
 }
 
 /* Text Color / Font/ Margin */
-p,h1,h2,h3,label,button{
+p,h1,h2,h3,label,button,.form_button,select,input{
     color:#EDDDC0;
     mix-blend-mode: difference;
-    text-align: center;
     font-family:'DM Sans', sans-serif;
     font-size: 17.5px;
-    margin-left: 200px;
-    margin-right: 200px;
+}
+p,h1,h2,h3,button,.form_button{
+    text-align: center;
+    margin: 0px 200px 0px 200px;
+}
+span{
+    color: rgba(255, 0, 0, .5);
 }
 
-/* Text Focus */
-.link:focus,p:focus,h1:focus,h2:focus,h3:focus,ul:focus{
-    background-color: #40135ba0;
+/* Selections */
+::selection{
+    background-color: #7204b2a0;
+    color: #FFFFFF;
+}
+::-moz-selection{
+    background-color: #7204b2a0;
+    color: #FFFFFF;
+}
+p:focus,h1:focus,h2:focus,label:focus,button:focus,.form_button:focus,select:focus,input:focus,a:focus{
+    background-color: #7204b2a0;
     color: #FFFFFF;
 }
 
@@ -80,59 +103,63 @@ li{
     text-align: start;
 }
 
-/*Dividers*/
+/* Dividers */
 hr{
     color: #FFFFFF;
     mix-blend-mode: difference;
-    margin: 8px 10% 8px 10%;
+    margin: 4px auto 4px auto;
     padding: 0;
     border: 0;
     height: 1rem;
     background-image: url('data:image/svg+xml;charset=utf8,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20x%3D%220px%22%20y%3D%220px%22%20viewBox%3D%220%200%20512%20512%22%20width%3D%22512%22%20height%3D%22512%22%3E%3Cstyle%3Eline%20%7Bstroke-linecap%3A%20square%3Bstroke-width%3A%202px%3Bstroke%3A%20%23EDDDC0%3Bvector-effect%3A%20non-scaling-stroke%3B%7D%3C%2Fstyle%3E%3Cline%20x1%3D%22256%22%20y1%3D%220%22%20x2%3D%220%22%20y2%3D%22256%22%20%2F%3E%3Cline%20x1%3D%22256%22%20y1%3D%22512%22%20x2%3D%22512%22%20y2%3D%22256%22%20%2F%3E%3C%2Fsvg%3E');
     background-position: center center;
     background-repeat: repeat-x;
-    background-size: auto 30.1%;
+    background-size: auto 35%;
 }
 
 /* Pages */
-.pages{
+nav{
     display: flex;
     flex-direction: row;
     justify-content: center;
 }
-.pages p{
+nav p{
     margin: 0px 20px 0px 20px;
 }
 
-/*Buttons*/
-button{
+/* Buttons */
+button,.form_button{
     border: 2px solid #EDDDC0;
     border-bottom: 4px solid #EDDDC0;
     border-radius: 3px;
     background: none;
-    padding: 3px 12px 3px 12px;
+    padding: 4px 14px 4px 14px;
     margin: auto auto 2px auto;
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
 }
-button:hover{
+button:hover,.form_button:hover{
     text-decoration: underline solid #EDDDC0;
+    cursor: pointer;
 }
-button:active{
+button:active,.form_button:active{
     text-decoration: underline solid rgba(0, 0, 0, 0);
 }
 .button_inline{
     display: inline;
 }
 
-/*Links*/
+/* --------------Specificities-------------- */
+/* Links */
 .link{
     font-family:'DM Sans', sans-serif;
     color:#EDDDC0;
     text-decoration: underline solid #EDDDC0;
     text-align: center;
+    transition: text 2s ease;
 }
 .link:hover{
+    transition: text 2s ease;
     text-decoration: none;
 }
 .link:active{
@@ -140,13 +167,14 @@ button:active{
     text-decoration: underline solid #FFFFFF;
 }
 
-/*Highlightings*/
+/* Highlightings */
 mark,h1{
     background-color: rgba(225, 207, 173, 0.225);
     color:#EDDDC0;
 }
 
-/*Titles*/
+/* --------------Titles-------------- */
+/* Titles */
 h1{
     text-decoration: underline solid #EDDDC0;
     font-family: "Jacquard 24", system-ui;
@@ -154,8 +182,7 @@ h1{
     background-size: 40%;
     margin: 5px auto 10px auto;
 }
-
-/*Sub Titles*/
+/* Sub Titles */
 h2{
     background-color: rgba(225, 207, 173, 0.04);
     font-family: "Oswald", sans-serif;
@@ -165,23 +192,99 @@ h2{
     font-weight: 600;
 }
 
+/* --------------Form-------------- */
+form{
+    padding: 5px;
+    border: 3px solid #FFFFFF;
+    border-radius: 10px;
+    backdrop-filter: blur(5px);
+    margin: auto;
+    width: 70%;
+}
+form div{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+fieldset{
+    color: #FFFFFF;
+    border: 2px solid #FFFFFF;
+    border-radius: 5px;
+    margin: 15px;
+}
+legend{
+    margin: auto;
+    font-family: "Oswald", sans-serif;
+    font-size: 20px;
+    font-weight: 600;
+    text-decoration: underline solid #EDDDC0 1px;
+}
+form div{
+    display: flex;
+    flex-direction: column;
+}
+form div.checkbox{
+    display: flex;
+    flex-direction: row;
+}
+input[type=email],input[type=text],input[type=number],select{
+    text-align: center;
+    width: 80%;
+    border: 0px;
+    border-bottom: 2px solid #ccc;
+    color: #FFFFFF;
+    background: none;
+    background-color: transparent;
+    padding: 5px;
+    margin-bottom: 15px;
+}
+input[type=checkbox]{
+    margin: 5px;
+}
+input[type=submit]:hover,input[type=reset]:hover{
+    cursor: pointer;
+}
+form p{
+    margin: 20px;
+}
+label{
+    font-weight: 600;
+    cursor: text;
+}
+select{
+    width: 50%;
+}
+option{
+    color: #000000;
+    background: none;
+    background-color: transparent;
+}
+
 /* --------------Portfolio-------------- */
 .portfolio_intro{
     display: flex;
     flex-direction: row;
     justify-content: center;
 }
-.portfolio_intro p{
+.portfolio_intro div{
+    border: 2px solid #ccc;
+    backdrop-filter: blur(2.5px);
     background-color: #3F1A546E;
     border-radius: 25px;
     height: 390px;
     width: 350px;
-    padding: 40px 50px 30px 30px;
-    margin: 0px;
+    padding: 40px 220px 30px 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.portfolio_intro p{
+    margin: 0px auto 0px auto;
 }
 .portfolio_intro img{
-    margin: auto 0px auto -30px;
-    border-radius: 50%;
+    margin: auto 0px auto -190px;
+    border-radius: 5%;
+    z-index: 1;
 }
 
 .photos{
@@ -204,21 +307,21 @@ h2{
     animation: FloatAnimation 5s ease-in-out infinite;
 }
 @keyframes FloatAnimation{
-    0%{transform: translatey( 0px );}
-    50%{transform: translateY( 10px );}
-    100%{transform: translateY( 0px );}
+    0%{transform: translatey( -10px );}
+    50%{transform: translateY( 0px );}
+    100%{transform: translateY( -10px );}
 }
 #end{
     animation: FloatReverseAnimation 5s ease-in-out infinite;
 } 
 @keyframes FloatReverseAnimation{
-    0%{transform: translateY( 0px );}
-    50%{transform: translateY( -10px );}
-    100%{transform: translateY( 0px );}
+    0%{transform: translateY( 10px );}
+    50%{transform: translateY( 0px );}
+    100%{transform: translateY( 10px );}
 }
 
 
-/*Media Queries*/
+/* Media Queries */
 @media screen and (max-width: 790px) {
     body{
         margin: 25px;
@@ -231,8 +334,7 @@ h2{
         margin: auto;
     }
     hr{
-        margin-left: 5%;
-        margin-right: 5%;
+        width: 90%;
     }
     p,h2,h3,ul{
         margin-left: 50px;
@@ -241,6 +343,21 @@ h2{
     h1{
         margin-left: 0px;
         margin-right: 0px;
+    }
+    form{
+        width: 80%;
+    }
+    .portfolio_intro{
+        flex-direction: column-reverse;
+        align-items: center;
+        justify-content: center;
+        margin: auto;
+    }
+    .portfolio_intro div{
+        padding: 220px 30px 30px 30px;
+    }
+    .portfolio_intro img{
+        margin: 0px auto -190px auto;
     }
 }
 @media screen and (max-width: 550px) {
@@ -255,8 +372,7 @@ h2{
         display: none;
     }
     hr{
-        margin-left: 2.5%;
-        margin-right: 2.5%;
+        width: 100%;
     }
     p,ul{
         margin-left: 25px;
@@ -269,6 +385,16 @@ h2{
     main img{
         width: 100%;
     }
+    form{
+        width: 85%;
+    }
+    .portfolio_intro div{
+        width: 75%;
+    }
+    .portfolio_intro img{
+        width: 75%;
+        height: 75%;
+    }
 }
 @media screen and (max-width: 480px) {
     body{
@@ -278,21 +404,14 @@ h2{
         width: 330px;
         height: 330px;
     }
-
-    hr{
-        margin-left: 1%;
-        margin-right: 1%;
-    }
-
     p,ul,h2{
         margin-left: 12px;
         margin-right: 12px;
         font-size: 15px;
     }
-    button,a{
+    button,a,label,select,option,input,.form_button{
         font-size: 15px;
     }
-
     h1{
         margin-left: 0px;
         margin-right: 0px;
@@ -312,21 +431,29 @@ h2{
     }
     .pages p{
         margin: 0px 10px 0px 10px;
-    }  
-    hr{
-        margin-left: 0%;
-        margin-right: 0%;
     }
     p,h1,h2,h3,ul{
         margin-left: 0px;
         margin-right: 0px;
     }
+    form p{
+        margin: 10px;
+    }
+    input[type=email],input[type=text],input[type=number],select{
+        width: 85%;
+    }
 }
 @media screen and (max-width: 391px) {
     header{
-        height: 320px;
+        height: 340px;
     }
     .asterisk{
         font-size: 25px;
+    }
+    fieldset{
+        margin: 10px;
+    }
+    input[type=email],input[type=text],input[type=number],select{
+        width: 90%;
     }
 }
