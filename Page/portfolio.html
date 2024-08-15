@@ -3,11 +3,13 @@
         <head>
             <meta charset="utf-8">
             <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-            <link rel="stylesheet" href="style.css" />
+            <link rel="stylesheet" href="style.css"/>
+            <link rel="website icon" type="png" href="img/icon.png">
             <link rel="preconnect" href="https://fonts.googleapis.com">
             <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
             <link href="https://fonts.googleapis.com/css2?family=Jacquard+24&display=swap" rel="stylesheet">
             <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&display=swap" rel="stylesheet">
+            <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
             <title>Gast's Portfolio</title>
         </head>
 
@@ -22,12 +24,12 @@
                         My name is Gast<br>They/them<br>Artist<br/><br/><mark>| Commissions not yet opened |</mark>
                     </p>
 
-                    <div>
-                        <a href="https://www.tiktok.com/@g4st_3r" class="link" target="_blank">Tiktok</a>
-                        <a href="https://www.youtube.com/@G4st_3r" class="link" target="_blank">Youtube</a>
-                        <a href="https://twitter.com/G4st_3r" class="link" target="_blank">Twitter</a>
-                        <a href="https://www.instagram.com/g4st_3r/" class="link" target="_blank">Instagram</a>
-                        <a href="https://www.twitch.tv/g4st_3r" class="link" target="_blank">Twitch</a>
+                    <div class="icons">
+                        <a href="https://www.tiktok.com/@g4st_3r" class="link" target="_blank"><i class="fa-brands fa-tiktok"></i></a>
+                        <a href="https://www.youtube.com/@G4st_3r" class="link" target="_blank"><i class="fa-brands fa-youtube"></i></a>
+                        <a href="https://twitter.com/G4st_3r" class="link" target="_blank"><i class="fa-brands fa-twitter"></i></a>
+                        <a href="https://www.instagram.com/g4st_3r/" class="link" target="_blank"><i class="fa-brands fa-instagram"></i></a>
+                        <a href="https://www.twitch.tv/g4st_3r" class="link" target="_blank"><i class="fa-brands fa-twitch"></i></a>
                     </div>
                 </div>
 
@@ -35,29 +37,32 @@
             </header>
 
             <hr/>
-            <div class="pages">
+            <nav>
                 <a href="personal_presentation.html" class="link">Presentation</a>
                 <p> | </p>
                 <a href="index.html" class="link">Home</a>
                 <p> | </p>
                 <a href="commissions.html" class="link">Commissions</a>
-            </div>
+            </nav>
             <hr/>
 
             <main>
                 <h1>My Portfolio</h1>
 
-                <h2>ABOUT ME</h2>
                 <section class="portfolio_intro">
-                    <p>
-                        Here's gonna be the text about my professionzl life ( not much ig ) and a really quick resume of who I am ( I can talk how I'm commited and open minded ), I can maybe also talk about what I have to offer again I don't know, well I think I should try and find the video I saw not so long ago that gave me the idea of the disposition I used for the part of the page, gosh it's gonna take forever to fill this div but at least I planned on leaving some space at the bottom and I'll put my infos at the bottom of it so it's fine
-                    </p>
-                    <img src="img/place_holder.jpg" height="380" width="329">
+                    <div>
+                        <h2 style="text-decoration: none; font-weight: 700; font-size: 24px; margin-bottom: 25px;">ABOUT ME</h2>
+                        <p>
+                            Howdy I'm Gast, Gast the Ghast ( please get the references ), I'm a passionate, commited, self-learned, queer artist always looking forwards to improve and learn new skills.<br/><br/>
+                            Something something something
+                        </p>
+                    </div>
+                    <img src="img/Autoportrait.jpg" height="380" width="380">
                 </section>
 
                 <br/>
 
-                <h2>MY ARTWORKS</h2>
+                <h2 id="pieces">MY ARTWORKS</h2>
                 <section class="photos">
                     <img src="img/place_holder.jpg" height="380" width="366">
                     <img src="img/place_holder.jpg" height="380" width="510">
